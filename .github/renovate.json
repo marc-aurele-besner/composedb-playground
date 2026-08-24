@@ -3,28 +3,52 @@
   "extends": [
     "config:base"
   ],
-  "labels": ["dependencies"],
+  "labels": [
+    "dependencies"
+  ],
   "packageRules": [
     {
-      "matchPackagePatterns": ["prettier"],
-      "labels": ["formatter"]
+      "matchPackagePatterns": [
+        "prettier"
+      ],
+      "labels": [
+        "formatter"
+      ]
     },
     {
-      "matchPackagePatterns": ["eslint"],
-      "labels": ["linting"]
+      "matchPackagePatterns": [
+        "eslint"
+      ],
+      "labels": [
+        "linting"
+      ]
     },
     {
-      "matchPackagePatterns": ["@types", "typescript"],
-      "labels": ["types"]
+      "matchPackagePatterns": [
+        "@types",
+        "typescript"
+      ],
+      "labels": [
+        "types"
+      ]
     },
     {
-      "matchDepTypes": ["optionalDependencies"],
-      "addLabels": ["optional"]
+      "matchDepTypes": [
+        "optionalDependencies"
+      ],
+      "addLabels": [
+        "optional"
+      ]
     },
     {
-      "matchDepTypes": ["minor", "patch", "devDependencies"],
+      "matchDepTypes": [
+        "minor",
+        "patch",
+        "devDependencies"
+      ],
       "automerge": true,
       "automergeType": "pr"
     }
-  ]
+  ],
+  "minimumReleaseAge": "1 day"
 }
